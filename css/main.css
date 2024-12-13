@@ -1,0 +1,230 @@
+/* Lato fontin asettaminen koko sivulle */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Kursorin vaihtuminen pointeriksi valikossa */
+a {
+    cursor: pointer;
+}
+
+/* Kuvien esilataus, jotta sivusto on sulavampi */
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/koira.jpg) url(../img/koira1.jpg) url(../img/koira2.jpg);
+}
+
+
+h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    line-height: 1, 5;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    line-height: 1, 5;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1, 5;
+}
+
+/* Header */
+.header-main {
+    width: 100%;
+    height: 266px;
+    background-image: url(../img/koira.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-betweem;
+}
+
+/* Logo */
+.header-logo {
+    width: fit-content;
+    height: 62px;
+    display: flex;
+}
+
+/* Valikko */
+.header-valikko {
+    width: fit-content;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* Valikon bullet pointien poisto */
+.header-valikko ul {
+    list-style: none;
+    margin-left: 8px;
+}
+
+/* Valikon painikkeiden muokkaus */
+.header-valikko ul li {
+    display: inline;
+    float: left;
+}
+
+/* Valikon painikkeiden tekstin muokkaus */
+.header-valikko ul li a {
+    padding: 0 10px;
+    line-height: 62px;
+    font-size: 20px;
+    color: black;
+    display: block;
+    height: 100%;
+}
+
+/* Valikon painikkeiden hover värinvaihto */
+.header-valikko ul li a:hover {
+    color: #e9724c;
+}
+
+/* Teksti-alue */
+.teksti-section {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Etusivun kuva */
+.kuva {
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    margin-bottom: 40px;
+}
+
+/* Etusivun teksti */
+.teksti {
+    flex-basis: 60px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background-color: #A5B592;
+    height: 80px;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+/* Media queries */
+
+/* Mobiili */
+@media (max-width: 600px) {
+    .header-main {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-valikko {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .header-valikko ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-valikko ul li {
+        display: block;
+    }
+
+    .kuva {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .teksti {
+        width: 90%;
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+/* Tabletti */
+@media (max-width: 768px) {
+    .header-main {
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kuva {
+        width: 250px;
+    }
+
+    .teksti-section {
+        padding: 40px 20px;
+    }
+
+    .footer {
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .header-main {
+        height: 266px;
+        flex-direction: row;
+    }
+
+    .kuva {
+        width: 250px;
+    }
+
+    .teksti-section {
+        flex-direction: row;
+        padding: 60px 0;
+    }
+
+    .teksti {
+        width: 60%;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
